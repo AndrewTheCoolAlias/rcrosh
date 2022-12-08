@@ -1,8 +1,12 @@
 <!doctype html>
-  <html>
+<html>
     <head>
-      <link rel="stylesheet" href="css/xterm.css" />
-      	<script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js" defer></script>
+      <link rel="stylesheet" href="https://raw.githubusercontent.com/AndrewTheCoolAlias/rcrosh/main/css/xterm.css" />
+      	<script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.5.1/addons/fullscreen/fullscreen.min.js" integrity="sha512-trkO8DI/7uSRW3ud1yrlz/CjvlGGFvA5k8dVfCXe7/XQqUP1StPoXRVIe2Ej8zgmZds3OLcAhfn48+2JDVX+yw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.5.1/addons/fullscreen/fullscreen.min.css" integrity="sha512-Uowe00aPyi/0HrMR7lEu5Ot9HPayA6wIBueVcj3sCCbFV2dan8tMs2AbPmjPdHW5iDDjwRFMa5nvIwmOQQ/qaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
     </head>
     <body>
       <div id="terminal"></div>
@@ -10,12 +14,19 @@
         var term = new Terminal({
 			cursorBlink: "block"
 		});
+        
+    
         term.open(document.getElementById('terminal'));
-		term.prompt = () => {
-			term.write('\n\r' + curr_line + '\r\n\u001b[32mcrosh> \u001b[37m');
-		};
+       
+
+	
 		term.write('this is a test');
-		term.prompt();
+	
+        
+
+        
+        
+        
       </script>
     </body>
   </html>
